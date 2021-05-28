@@ -1,34 +1,36 @@
 import * as React from 'react';
-import { IAppState } from "./IAppState";
-import { observer } from "mobx-react";
+import { IAppState } from './IAppState';
+import { observer } from 'mobx-react';
 import { TreeInput } from './TreeInput';
 import { TreeOutput } from './TreeOutput';
-import "./Body.scss"
+import './Body.scss';
 import { useAppStateContext } from './AppState';
 interface BodyProps {
-    appState: IAppState
+  appState: IAppState;
 }
 
-const BodyRenderer: React.FunctionComponent<BodyProps> = observer((props) => {
-    return (
-        <main className="App-body">
-            {props.appState!.bodyMessage}
-            <TreeInput onChange={(newVal) => {
-                props.appState.setState({
-                    ...props.appState,
-                    treeNode: newVal
-                })
-            }} />
-            <div className="OutputContainer">
-                <TreeOutput treeNode={props.appState.treeNode} />
-            </div>
-        </main>
-    );
-})
+const BodyRenderer: React.FunctionComponent<BodyProps> = observer(props => {
+  const changeHandler = (newVal: any): void => {
+    props.appState.setState({
+      ...props.appState,
+      treeNode: newVal,
+    });
+  };
 
-export const Body: React.FunctionComponent<{}> = (props) => {
-    const appState = useAppStateContext();
-    return <BodyRenderer appState={appState} />
-}
+  return (
+    <main className="App-body">
+      {props.appState!.bodyMessage}
+      <TreeInput onChange={changeHandler} />
+      <div className="OutputContainer">
+        <TreeOutput treeNode={props.appState.treeNode} />
+      </div>
+    </main>
+  );
+});
+
+export const Body: React.FunctionComponent<{}> = props => {
+  const appState = useAppStateContext();
+  return <BodyRenderer appState={appState} />;
+};
 
 export default Body;
