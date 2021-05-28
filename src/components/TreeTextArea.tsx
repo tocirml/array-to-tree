@@ -17,7 +17,7 @@ export const TreeTextArea: React.FunctionComponent<TreeTextAreaProps> =
           name="tree-text"
           cols={100}
           rows={20}
-          value={JSON.stringify(props.treeNode)}
+          value={JSON.stringify(props.treeNode, null, 2)}
         ></textarea>
       </div>
     );
