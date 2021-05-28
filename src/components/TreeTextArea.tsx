@@ -35,8 +35,6 @@ export const TreeTextArea: React.FunctionComponent<TreeTextAreaProps> =
         <br />
         <textarea
           name="tree-text"
-          cols={100}
-          rows={20}
           value={text}
           onChange={changeHandler}
         ></textarea>

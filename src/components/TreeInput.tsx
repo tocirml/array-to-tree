@@ -58,7 +58,7 @@ export class TreeInput extends React.Component<TreeInputProps, TreeInputState> {
 
   render() {
     return (
-      <div>
+      <div className="tree-source">
         <label htmlFor="array-input">Tree source</label>
         <br />
         <input
