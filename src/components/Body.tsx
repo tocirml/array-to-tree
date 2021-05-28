@@ -1,10 +1,11 @@
 import * as React from 'react';
-import { IAppState } from './IAppState';
+import { IAppState } from '../store/IAppState';
 import { observer } from 'mobx-react';
 import { TreeInput } from './TreeInput';
 import { TreeOutput } from './TreeOutput';
 import './Body.scss';
-import { useAppStateContext } from './AppState';
+import { useAppStateContext } from '../store/AppState';
+
 interface BodyProps {
   appState: IAppState;
 }

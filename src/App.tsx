@@ -1,8 +1,8 @@
 import * as React from 'react';
-import "./configureMobx";
-import { AppStateContextProvider, AppState } from './AppState';
-import Header from './Header';
-import Body from './Body';
+import './config/configureMobx';
+import { AppStateContextProvider, AppState } from './store/AppState';
+import Header from './components/Header';
+import Body from './components/Body';
 
 import './App.scss';
 
@@ -17,7 +17,6 @@ const App = () => {
       </div>
     </AppStateContextProvider>
   );
-}
-
+};
 
 export default App;

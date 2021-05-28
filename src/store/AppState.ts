@@ -1,8 +1,8 @@
 import * as React from 'react';
-import './configureMobx';
+import '../config/configureMobx';
 import { observable, action, makeObservable } from 'mobx';
 import { IAppState } from './IAppState';
-import { BinTreeNode } from './TreeNode';
+import { BinTreeNode } from '../models/TreeNode';
 import { createContext } from 'react';
 
 export class AppState implements IAppState {

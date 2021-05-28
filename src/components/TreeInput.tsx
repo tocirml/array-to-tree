@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { BinTreeNode } from './TreeNode';
+import { BinTreeNode } from '../models/TreeNode';
+import './TreeInput.scss';
 
 export interface TreeInputProps {
   onChange: (newTreeNode: BinTreeNode) => void;
@@ -47,15 +48,15 @@ export class TreeInput extends React.Component<TreeInputProps, TreeInputState> {
       <div>
         <button onClick={this.convert}>Process</button>
         <br />
-        <textarea
-          rows={5}
-          cols={120}
+        <input
+          type="text"
+          className="array-input"
           onChange={ev => {
             this.setState({
               treeText: ev.target.value,
             });
           }}
-        ></textarea>
+        />
       </div>
     );
   }

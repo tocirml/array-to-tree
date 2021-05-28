@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { BinTreeNode } from './TreeNode';
+import { BinTreeNode } from '../models/TreeNode';
 
 import './TreeOutput.scss';
 
