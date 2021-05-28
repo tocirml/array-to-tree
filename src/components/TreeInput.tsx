@@ -6,7 +6,7 @@ export interface TreeInputProps {
   onChange: (newTreeNode: BinTreeNode) => void;
 }
 interface TreeInputState {
-  treeText: string;
+  treeText: string | ArrayBuffer | null;
 }
 
 export class TreeInput extends React.Component<TreeInputProps, TreeInputState> {
@@ -35,12 +35,25 @@ export class TreeInput extends React.Component<TreeInputProps, TreeInputState> {
 
   convert = () => {
     // After you implement parseArrayToTree above, uncomment the below code
-    let treeArrayFormat: any[] = JSON.parse(this.state.treeText);
-    this.props.onChange(this.parseArrayToTree(treeArrayFormat));
+    let treeArrayFormat: any[];
+    if (typeof this.state.treeText === 'string') {
+      treeArrayFormat = JSON.parse(this.state.treeText);
+      this.props.onChange(this.parseArrayToTree(treeArrayFormat));
+    }
 
     // After you implement parseArrayToTree above, comment the below code
     // let treeNodeFormat: BinTreeNode = JSON.parse(this.state.treeText);
     // this.props.onChange(treeNodeFormat);
+  };
+
+  handleChange = (e: any) => {
+    const fileReader = new FileReader();
+    fileReader.readAsText(e.target.files[0], 'UTF-8');
+    fileReader.onload = e => {
+      this.setState({
+        treeText: e.target!.result,
+      });
+    };
   };
 
   render() {
@@ -52,12 +65,15 @@ export class TreeInput extends React.Component<TreeInputProps, TreeInputState> {
           type="text"
           name="array-input"
           className="array-input"
+          value={String(this.state.treeText)}
           onChange={ev => {
             this.setState({
               treeText: ev.target.value,
             });
           }}
         />
+        OR
+        <input type="file" onChange={this.handleChange} />
         <br />
         <button onClick={this.convert}>Fetch</button>
       </div>
