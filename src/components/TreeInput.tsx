@@ -46,10 +46,11 @@ export class TreeInput extends React.Component<TreeInputProps, TreeInputState> {
   render() {
     return (
       <div>
-        <button onClick={this.convert}>Process</button>
+        <label htmlFor="array-input">Tree source</label>
         <br />
         <input
           type="text"
+          name="array-input"
           className="array-input"
           onChange={ev => {
             this.setState({
@@ -57,6 +58,8 @@ export class TreeInput extends React.Component<TreeInputProps, TreeInputState> {
             });
           }}
         />
+        <br />
+        <button onClick={this.convert}>Fetch</button>
       </div>
     );
   }
