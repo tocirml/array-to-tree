@@ -120,6 +120,8 @@ Again, recursiveness was the key fo this solution. Probably there are better sol
 
 - Full responsiveness was added, so in order to have a good experiences on all devices, responsiveness was taken into consideration and the styles were updated accordinly. No CSS framework was used, only SASS preprocessor.
 
+- Unit testing must be improved, due lack of time I ended doing basic testing only.
+
 ## Available Scripts
 
 In the project directory, you can run:
