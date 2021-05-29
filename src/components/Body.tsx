@@ -21,7 +21,7 @@ const BodyRenderer: React.FunctionComponent<BodyProps> = observer(props => {
 
   return (
     <main className="App-body">
-      {props.appState!.bodyMessage}
+      <div className="body-message">{props.appState!.bodyMessage}</div>
       <TreeInput onChange={changeHandler} />
       <TreeTextArea
         onChange={changeHandler}

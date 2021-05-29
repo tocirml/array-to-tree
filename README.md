@@ -49,10 +49,11 @@ The output will highlight in green border the smallest tree with all the deepest
 ## SOLUTION
 
 The challenge presented 3 problems.
-A skeleton app was presented as an option, in order to updated it with the solutions for the problems. This option was taken.
+A skeleton app was presented as an option, in order to update it with the solutions for the problems. This option was taken.
+
 Reasons:
 
-- It presented a good challenge since the app was started with Typescript and Mobx, both technologies that I was not much familiar with, specially Mobx. So learning somehitng new and having the chance to experiment wih it is always good for growing up as developer.
+- It presented a good challenge since the app was started with Typescript and Mobx, both technologies that I was not much familiar with, specially Mobx. So learning somethitng new and having the chance to experiment with it is always good for growing up as developer.
 - It always presents a challenge to start working on an app with code from someone else. Learning by checking others code is always a good method.
 - Typescript is something I'm very interested in, so I took the chance to learn more about it.
 
@@ -83,10 +84,11 @@ As soon as the fetch button is pressed this function will be called, will parse 
 Divided in 3 parts:
 
 1. Allow user to provide a file with the array input. It was decided to also let the user use a input text in order to provide the array.
+   Inside src/samples there is soem files that can be used to test this functionality.
 
 2. The JSON data on the Tree Text must be displayed in a "good" format. This was done with JSON.stringsify
 
-```
+```javascript
 JSON.stringify(treeNode, null, 2);
 ```
 
@@ -104,9 +106,17 @@ Basically the implemented solution has 3 steps.
 2. Find all the trees that have the deepest nodes. (findDeepNodes)
 3. Find the smaller one that contains all deepest nodes. (findRealId)
 
+As soon as a new tree is provided to the app state, this functions will be called in order to set the correct id on the state as well.
+
 The only assumption made was that all tree Ids are unique. Because we are using the tree ID to check which tree to paint with border green in the Output.
 
 Again, recursiveness was the key fo this solution. Probably there are better solutions for this problem, but I decided to do this on my own and not look for any clue on the internet.
+
+## Improvements
+
+- As previously mentioned, the ability to use a input text was added along with the file input.
+
+- Full responsiveness was added, so in order to have a good experiences on all devices, responsiveness was taken into consideration and the styles were updated accordinly. No CSS framework was used, only SASS preprocessor.
 
 ## Available Scripts
 

@@ -1,8 +1,7 @@
 .treeNode {
-  // fill me in
   padding: 5px;
   border: solid 1px rgb(0, 16, 247);
-  width: auto;
+  width: fit-content;
   .nodeId {
     font-weight: bold;
     color: rgb(255, 255, 255);
@@ -11,6 +10,7 @@
   }
 
   .nodeChildren {
+    width: fit-content;
     border: solid 1px rgb(251, 255, 0);
     padding: 5px;
     display: flex;

@@ -1,14 +1,13 @@
 .App-body {
-  > * {
-    margin: 10px 5px;
+  padding: 5px;
+  .body-message {
+    margin: 10px;
   }
   .OutputContainer {
     padding: 10px;
     border: 1px solid black;
     background: rgb(70, 69, 69);
-    max-width: 1200px;
     overflow-x: scroll;
-    position: absolute;
-    left: 0;
+    left: 3px;
   }
 }

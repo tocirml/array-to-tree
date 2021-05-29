@@ -72,10 +72,13 @@ export class TreeInput extends React.Component<TreeInputProps, TreeInputState> {
             });
           }}
         />
-        OR
+        {/* <div className="or">OR</div> */}
+        <br />
         <input type="file" onChange={this.handleChange} />
         <br />
-        <button onClick={this.convert}>Fetch</button>
+        <button onClick={this.convert} className="fetch-button">
+          Fetch
+        </button>
       </div>
     );
   }
