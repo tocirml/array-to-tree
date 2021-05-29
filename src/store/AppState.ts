@@ -4,6 +4,7 @@ import { observable, action, makeObservable } from 'mobx';
 import { IAppState } from './IAppState';
 import { BinTreeNode } from '../models/TreeNode';
 import { createContext } from 'react';
+import { findSmallestTreeId } from '../utils/binaryTreeUtils';
 
 export class AppState implements IAppState {
   @observable title = 'Tree Traversal';
@@ -11,6 +12,8 @@ export class AppState implements IAppState {
   @observable bodyMessage = 'Process the input text to a BinTreeNode';
 
   @observable treeNode = new BinTreeNode('root', null, null);
+
+  @observable smallestTreeId = 'root';
 
   constructor() {
     makeObservable(this);
@@ -20,6 +23,7 @@ export class AppState implements IAppState {
     this.title = newState.title;
     this.bodyMessage = newState.bodyMessage;
     this.treeNode = newState.treeNode;
+    this.smallestTreeId = findSmallestTreeId(newState.treeNode); //parse this
   }
 }
 

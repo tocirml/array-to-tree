@@ -5,6 +5,7 @@ import './TreeOutput.scss';
 
 export interface TreeOutputProps {
   treeNode: BinTreeNode | null | undefined;
+  smallestTreeId: string | number;
 }
 
 export const TreeOutput: React.FunctionComponent<TreeOutputProps> = props => {
@@ -12,12 +13,22 @@ export const TreeOutput: React.FunctionComponent<TreeOutputProps> = props => {
     return <div className="treeNode"></div>;
   }
   return (
-    <div className="treeNode">
+    <div
+      className={`treeNode ${
+        props.smallestTreeId === props.treeNode.id && 'smallest-subtree'
+      }`}
+    >
       <div className="nodeId">{props.treeNode.id}</div>
       {props.treeNode.left || props.treeNode.right ? (
         <div className="nodeChildren">
-          <TreeOutput treeNode={props.treeNode.left} />
-          <TreeOutput treeNode={props.treeNode.right} />
+          <TreeOutput
+            treeNode={props.treeNode.left}
+            smallestTreeId={props.smallestTreeId}
+          />
+          <TreeOutput
+            treeNode={props.treeNode.right}
+            smallestTreeId={props.smallestTreeId}
+          />
         </div>
       ) : null}
     </div>

@@ -28,7 +28,10 @@ const BodyRenderer: React.FunctionComponent<BodyProps> = observer(props => {
         treeNode={props.appState.treeNode}
       />
       <div className="OutputContainer">
-        <TreeOutput treeNode={props.appState.treeNode} />
+        <TreeOutput
+          treeNode={props.appState.treeNode}
+          smallestTreeId={props.appState.smallestTreeId}
+        />
       </div>
     </main>
   );
