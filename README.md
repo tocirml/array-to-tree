@@ -57,6 +57,8 @@ Reasons:
 - It always presents a challenge to start working on an app with code from someone else. Learning by checking others code is always a good method.
 - Typescript is something I'm very interested in, so I took the chance to learn more about it.
 
+In order to have a better app structure/organization, many folders were created, previously all files were inside /src which cause confusion.
+
 ### Problem 1
 
 Parse the array with format [id, leftChild, rightChild] into a binary tree JSON structure.
