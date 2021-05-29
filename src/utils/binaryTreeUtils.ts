@@ -46,6 +46,5 @@ export const findSmallestTreeId = (tree: BinTreeNode) => {
   nodeIds = [];
   const treeDepth = findTreeDepth(tree);
   findDeepNodes(tree, 1, treeDepth);
-  console.log(nodeIds);
   return findRealId(tree);
 };
