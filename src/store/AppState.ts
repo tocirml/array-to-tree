@@ -13,6 +13,7 @@ export class AppState implements IAppState {
 
   @observable treeNode = new BinTreeNode('root', null, null);
 
+  // this added field on the state will tell react what treeBode to paint border green as per Problem 3
   @observable smallestTreeId = 'root';
 
   constructor() {

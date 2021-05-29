@@ -27,6 +27,7 @@ const BodyRenderer: React.FunctionComponent<BodyProps> = observer(props => {
         onChange={changeHandler}
         treeNode={props.appState.treeNode}
       />
+      Output:
       <div className="OutputContainer">
         <TreeOutput
           treeNode={props.appState.treeNode}

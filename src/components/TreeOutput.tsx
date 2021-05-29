@@ -15,6 +15,7 @@ export const TreeOutput: React.FunctionComponent<TreeOutputProps> = props => {
   return (
     <div
       className={`treeNode ${
+        // we check what Id matches to paint its border green, problem 3
         props.smallestTreeId === props.treeNode.id && 'smallest-subtree'
       }`}
     >
