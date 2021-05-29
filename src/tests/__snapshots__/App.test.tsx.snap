@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshots App snapshot 1`] = `
+<ContextProvider
+  value={
+    AppState {
+      "bodyMessage": "Process the input text to a BinTreeNode",
+      "smallestTreeId": "root",
+      "title": "Tree Traversal",
+      "treeNode": BinTreeNode {
+        "id": "root",
+        "left": null,
+        "right": null,
+      },
+    }
+  }
+>
+  <div
+    className="App"
+  >
+    <Header />
+    <Body />
+  </div>
+</ContextProvider>
+`;

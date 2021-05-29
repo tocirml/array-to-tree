@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshots Body snapshot 1`] = `
+<Memo(wrappedComponent)
+  appState={
+    AppState {
+      "bodyMessage": "Process the input text to a BinTreeNode",
+      "smallestTreeId": "root",
+      "title": "Tree Traversal",
+      "treeNode": BinTreeNode {
+        "id": "root",
+        "left": null,
+        "right": null,
+      },
+    }
+  }
+/>
+`;
+
+exports[`snapshots BodyRenderer snapshot 1`] = `
+<main
+  className="App-body"
+>
+  <div
+    className="body-message"
+    data-testid="body-message"
+  />
+  <TreeInput
+    onChange={[Function]}
+  />
+  <TreeTextArea
+    onChange={[Function]}
+  />
+  Output:
+  <div
+    className="OutputContainer"
+  >
+    <TreeOutput />
+  </div>
+</main>
+`;

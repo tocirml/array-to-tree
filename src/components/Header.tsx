@@ -8,9 +8,13 @@ interface HeaderProps {
 }
 
 @observer
-class HeaderRenderer extends React.Component<HeaderProps> {
+export class HeaderRenderer extends React.Component<HeaderProps> {
   render() {
-    return <header className="App-header">{this.props.appState!.title}</header>;
+    return (
+      <header className="App-header" data-testid="header">
+        {this.props.appState!.title}
+      </header>
+    );
   }
 }
 

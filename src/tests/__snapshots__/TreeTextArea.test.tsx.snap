@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshots TreeTextArea snapshot 1`] = `
+<div
+  className="tree-text-area"
+>
+  <label
+    htmlFor="tree-text"
+  >
+    Tree Text:
+  </label>
+  <br />
+  <textarea
+    name="tree-text"
+    onChange={[Function]}
+    value="{
+  \\"id\\": \\"root\\",
+  \\"left\\": null,
+  \\"right\\": null
+}"
+  />
+</div>
+`;

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshots TreeOutput snapshot 1`] = `
+<div
+  className="treeNode"
+/>
+`;

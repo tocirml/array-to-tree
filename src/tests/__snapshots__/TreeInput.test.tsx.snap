@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshots TreeInput snapshot 1`] = `
+<div
+  className="tree-source"
+>
+  <label
+    htmlFor="array-input"
+  >
+    Tree source
+  </label>
+  <br />
+  <input
+    className="array-input"
+    name="array-input"
+    onChange={[Function]}
+    type="text"
+    value=""
+  />
+  <br />
+  <input
+    onChange={[Function]}
+    type="file"
+  />
+  <br />
+  <button
+    className="fetch-button"
+    onClick={[Function]}
+  >
+    Fetch
+  </button>
+</div>
+`;
