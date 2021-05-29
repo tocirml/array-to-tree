@@ -12,6 +12,7 @@ interface BodyProps {
 }
 
 const BodyRenderer: React.FunctionComponent<BodyProps> = observer(props => {
+  // this function was moved outside the template, to keep it cleaner
   const changeHandler = (newVal: any): void => {
     props.appState.setState({
       ...props.appState,

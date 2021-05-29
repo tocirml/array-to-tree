@@ -9,6 +9,8 @@ const findTreeDepth = (tree: BinTreeNode | null | undefined): number => {
 
 let nodeIds: any[] = [];
 
+// find the nodes that have children with the deepest nodes
+// basically find all the subtrees with all deepest nodes
 const findDeepNodes = (
   tree: BinTreeNode | null | undefined,
   currentDepth: number,
@@ -30,6 +32,7 @@ const findDeepNodes = (
   return false;
 };
 
+// now find the smallest subtree of the array with all the deepest nodes
 const findRealId = (tree: BinTreeNode | null | undefined): any => {
   if (!tree) return false;
   let isOnLeft = tree!.left && nodeIds.includes(tree!.left!.id),
@@ -42,6 +45,7 @@ const findRealId = (tree: BinTreeNode | null | undefined): any => {
   }
 };
 
+// main function, will return the id of the smallest subtree with all deepest nodes
 export const findSmallestTreeId = (tree: BinTreeNode) => {
   nodeIds = [];
   const treeDepth = findTreeDepth(tree);

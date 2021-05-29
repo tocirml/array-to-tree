@@ -14,10 +14,13 @@ export const TreeTextArea: React.FunctionComponent<TreeTextAreaProps> =
     const [error, setError] = React.useState<string | null>(null);
 
     React.useEffect(() => {
+      // basically whenever the app state tree changes, it will update the textarea
       setText(jsonTree);
     }, [jsonTree]);
 
     const changeHandler = (event: any) => {
+      // whenever the textarea changes, will check if can parse it,
+      // if not valid then will add an error to the local state
       const { value } = event.target;
       setText(value);
       try {
@@ -38,6 +41,7 @@ export const TreeTextArea: React.FunctionComponent<TreeTextAreaProps> =
           value={text}
           onChange={changeHandler}
         ></textarea>
+        {/* check if we have error for display */}
         {error && <div className="json-error">{error}</div>}
       </div>
     );

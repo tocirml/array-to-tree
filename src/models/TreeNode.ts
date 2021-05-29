@@ -1,3 +1,4 @@
+// added left and right as optional, to match the desired data structure
 export class BinTreeNode {
   id: string;
   left?: BinTreeNode | null;

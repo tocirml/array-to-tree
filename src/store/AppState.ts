@@ -24,7 +24,7 @@ export class AppState implements IAppState {
     this.title = newState.title;
     this.bodyMessage = newState.bodyMessage;
     this.treeNode = newState.treeNode;
-    this.smallestTreeId = findSmallestTreeId(newState.treeNode); //parse this
+    this.smallestTreeId = findSmallestTreeId(newState.treeNode); // parsing the tree to return the correct id
   }
 }
 
